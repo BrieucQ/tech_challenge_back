@@ -15,10 +15,9 @@ module.exports.handleOneArgonautes = async (req, res) => {
 };
 
 module.exports.handleCreateArgonautes = async (req, res) => {
-  const { name, age } = req.body;
+  const { name } = req.body;
   const data = await postOneArgonaute({
     name,
-    age,
   });
   return res.status(201).send(data);
 };
